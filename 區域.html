@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //JS找變數會先找原本的區域，找不到再往外找，都沒有就是undefined
+        let a = 1
+        if (true) {
+            let a = 2
+            console.log(a) //2
+        }
+        console.log(a) //1
+
+
+        let b = 1
+        if (true) {
+            b = 2 //沒有let，所以是改值
+            console.log(b) //2
+        }
+        console.log(b) //2
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH4邏輯判斷式</title>
+</head>
+
+<body>
+    <script>
+        /*if 條件{
+            成立時的結果
+        }else{
+            不成立時的結果
+        }
+        */
+        const a = 10, b = 20
+        if (a > b) {
+            console.log('a大於b')
+        }
+        else {
+            console.log('a不大於b')
+        }
+
+        const c = 100, d = '100'
+        if (c == d) {
+            console.log('c==d')
+        } else {
+            console.log('c!=d')
+        }
+
+        if (c === d) {
+            console.log('c===d')
+        } else {
+            console.log('c!==d')
+        }
+
+
+        //
+        const ok = false
+        //if(ok)等於if(ok===true)
+        if (ok) {
+            console.log('ok')
+        }
+        //if(ok)等於if(ok===false)
+        //!變數，表示否定、相反********
+        if (!ok) {
+            console.log('not ok')
+        }
+
+        //confirm (訊息)：跳出確認視窗，會收到true或false（前者點確認、後者點取消）
+        const sleep = confirm('中午有沒有睡覺')
+        //如果if、else、else of、for裡面只有一行的話，不需要{}
+        if (sleep) console.log('有睡')
+        else console.log('沒睡')
+
+
+
+        const like = confirm('你喜歡js嗎')
+        /*let message=''
+        if(like) message='喜歡'
+         else message='不喜歡'
+        將上面三行以三元運算子寫法得到下面*/
+        //三元運算子寫法：條件? 成立時的程式碼: 不成立時的程式碼 （2選1才可用）
+        const message =
+            like ? '喜歡' : '不喜歡'
+        console.log(message)
+
+        //講義上的範例
+        let cool = confirm("你覺得你很 帥/美 嗎?");
+        //當cool的視窗點選確認時，msg="你好 帥哥/美女"；點取消時，msg="別看不起自己，你其實很 帥/美"
+        let msg
+            = cool ? "你好 帥哥/美女" : "別看不起自己，你其實很 帥/美";
+        alert(msg);
+    </script>
+</body>
+
+</html>

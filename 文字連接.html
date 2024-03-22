@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字連接</title>
+</head>
+
+<body>
+    <script>
+        /*prompt()輸入框文字：跳出一個文字輸入框
+        ()內填寫輸入框文字
+        輸入框出現時，網頁是暫停狀態
+        會收到輸入的文字，如果按取消的話則是null */
+        //通常同一個使用者名字不會變，所以可用const來宣告變數
+        const lastName = prompt('請輸入姓')
+        const firstName = prompt('請輸入名')
+        // 使用 + 將文字連接起來
+        const fullName = lastName + firstName
+
+        /*文字連接
+         使用 + 連接文字及變數，分成三個東西：<h1>、fullName、</h1>*/
+        //document.write()表示在網頁上顯示變數
+        document.write('<h1>' + fullName + '</h1>')
+        // 使用模板語法在文字中插入變數
+        //注意是``(頓號)中才可以插入 ${變數}
+        document.write(`<h1>${fullName}</h1>`)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH2 變數</title>
+</head>
+
+<body>
+    <script>
+        // var 全域變數：可以重複宣告，新的會覆蓋舊的
+        var a = 1
+        console.log(a)
+        //需要改值時不需要重複宣告，用 = 修改即可
+        a = 2 //改值
+        console.log(a) //2
+        var a = 3
+        console.log(a) //3
+
+
+        /*let 區域變數：
+        區域內不能重複宣告，{}為一區
+        宣告後可以修改*/
+        /*let a = 1（前面已宣告過a）
+        瀏覽器按F12會顯示：Uncaught SyntaxError: Identifier 'a' has already been declared
+        顯示上述內容的話其他東西會跑不出來*/
+        let b = 1 //建議第一次都要宣告
+        console.log(b) //1
+        b = 2 //有加let才是宣告，沒有加的話是找到b去改它的值
+        console.log(b) //2
+
+        /*const 常數：
+        區域內不能重複宣告，{}為一區
+        宣告後不能修改值
+        使用情境：確定後面沒有要修改的話就可用const */
+        const c = 1
+        console.log(c)
+        /* c = 2（c已宣告為常數，不可修改值）
+        瀏覽器按F12會顯示：Uncaught TypeError: Assignment to constant variable.*/
+    </script>
+</body>
+
+</html>
