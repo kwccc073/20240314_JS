@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0314作業</title>
+</head>
+
+<body>
+    <script>
+        /*題目：製作一個星座判斷器，進入網頁時出現三個輸入視窗，分別是姓名、出生月份和出生日期
+            輸入完成後跳出訊息，格式為 OOO 你好，你的星座是 OOO 座*/
+
+        const name = prompt('請輸入姓名')
+        const month = prompt('請輸入出生月份')
+        const date = prompt('請輸入出生日期')
+        //可以改成：
+        //let star = ''
+        //下面這行刪掉，改寫最後面那行
+        document.write(`${name}你好，`)
+
+        if ((month == 3 && (date >= 21 && date <= 31)) || (month == 4 && (date > 0 && date <= 19))) {
+            document.write('你的星座是牡羊座') //牡羊座 3/21-4/19
+            //改成star = '牡羊座'
+        } else if ((month == 4 && (date >= 20 && date <= 30)) || (month == 5 && (date > 0 && date <= 20))) {
+            document.write('你的星座是金牛座') //金牛座 4/20-5/20
+            //改成star = '金牛座'
+        } else if ((month == 5 && (date >= 21 && date <= 31)) || (month == 6 && (date > 0 && date <= 20))) {
+            document.write('你的星座是雙子座') //雙子座 5/21-6/20
+            //接下來都同上
+        } else if ((month == 6 && (date >= 21 && date <= 30)) || (month == 7 && (date > 0 && date <= 22))) {
+            document.write('你的星座是巨蟹座') //巨蟹座 6/21-7/22
+        } else if ((month == 7 && (date >= 23 && date <= 31)) || (month == 8 && (date > 0 && date <= 22))) {
+            document.write('你的星座是獅子座') //獅子座 7/23-8/22
+        } else if ((month == 8 && (date >= 23 && date <= 31)) || (month == 9 && (date > 0 && date <= 22))) {
+            document.write('你的星座是處女座') //處女座 8/23-9/22
+        } else if ((month == 9 && (date >= 23 && date <= 30)) || (month == 10 && (date > 0 && date <= 22))) {
+            document.write('你的星座是天秤座') //天秤座 9/23-10/22
+        } else if ((month == 10 && (date >= 23 && date <= 31)) || (month == 11 && (date > 0 && date <= 21))) {
+            document.write('你的星座是天蠍座') //天蠍座 10/23- 11/21
+        } else if ((month == 11 && (date >= 22 && date <= 30)) || (month == 12 && (date > 0 && date <= 21))) {
+            document.write('你的星座是射手座') //射手座 11/22-12/21
+        } else if ((month == 12 && (date >= 22 && date <= 31)) || (month == 1 && (date > 0 && date <= 19))) {
+            document.write('你的星座是魔羯座') //魔羯座 12 / 22 - 1 / 19
+        } else if ((month == 1 && (date >= 20 && date <= 31)) || (month == 2 && (date > 0 && date <= 18))) {
+            document.write('你的星座是水瓶座') //水瓶座 1/20-2/18
+        } else if ((month == 2 && (date >= 19 && date <= 29)) || (month == 3 && (date > 0 && date <= 20))) {
+            document.write('你的星座是雙魚座') //雙魚座 2/19-3/20
+        } else { document.write('你輸入的出生月份或日期錯誤') }
+
+        //document.write(`${name}你好，你的星座是${}`)
+    </script>
+
+</body>
+
+</html>
